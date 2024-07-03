@@ -15,111 +15,226 @@
     <meta property="og:site_name" content="My-Website"/>
     <meta property="og:image" content="https://my-website.com/image.jpg"/>
 
+    <!--We can add styling to all properties with a shared id using <style>-->
+    <style>
+      #list{
+        border:5px solid blue;
+        background-color: powderblue;
+        color: white;
+      }
+      #write{
+        border:5px solid green;
+        background-color: darkseagreen;
+        color: white;
+      }
+      #link{
+        border:5px solid red;
+        background-color: lightcoral;
+        color: white;
+      }
+      #table{
+        border:5px solid darkorange;
+        background-color: lightsalmon;
+        color: white;
+      }
+      span{
+        background-color: yellow;
+      }
+      #listing{
+        border:10px solid blue;
+      }
+      #writing{
+        border:10px solid green;
+      }
+      #linking{
+        border:10px solid red;
+      }
+      #tables{
+        border:10px solid darkorange;
+      }
+      #form{
+        border:10px blueviolet;
+        background-color: mediumorchid;
+      }
+    </style>
+
   </head>
   
   <body>
-    
-    <!--Different Headign sizes from h1 onwards-->
-    <h1>
-      Title
-    </h1>
+   <!--<div> can be used to close off whole sections of code that are related-->
 
-    <!--Menu accessed through links-->
-    <ul>
-      <li>
-        <a href="#write">Writing</a>
-      </li>
-      
-      <li>
-        <a herf="#listing">Listing</a>
-      </li>
-      
-      <li>
-        <a herf="#linking">Linkage</a>
-      </li>
-    </ul>
+      <!--Different Heading sizes from h1 onwards-->
+      <h1>
+        Title
+      </h1>
 
-    <h2 id="write">
-      Writing
-    </h2>
-    <!--Paragraph notation <p></p> and line break notation <br>-->
-    <!-- Paragraph notation needs a closing notation but line break notation does not-->
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.<br> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p> 
-    <h2>
-      Sub-Heading
-    </h2>
-    <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.<br> Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.<br> In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
-    <p>Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.<br> Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. <br>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
+      <!--Menu accessed through links-->
+      <ul>
+        <li>
+          <a href="#write">Writing</a>
+        </li>
+        
+        <li>
+          <a href="#list">Listing</a>
+        </li>
+        
+        <li>
+          <a href="#link">Linkage</a>
+        </li>
 
-    <h2 id="listing">
-      Creating a List
-    </h2>
-    <!--Creating a normal ordered list indexed with numbers-->
-    <ol>
-      <!--<li></li>is used to indicate a list item-->
-      <li>
-        Item 1 of 239
-      </li>
-      <li>
-        Item 2 of 239
-      </li>
-      <li>
-        Item 3 of 239
-      </li>
-    </ol>
-    <!--type="a" for alphabet listing and type="i" for ronam numerals, i can be uppercase or lowercase for the respective roman numerals-->
-    <ol type="a">
-      <li>
-        Item 1 of 239
-      </li>
-      <li>
-        Item 2 of 239
-      </li>
-      <li>
-        Item 3 of 239
-      </li>
-    </ol>
-    <!--start="" can be used for the list index to start at a differnt position-->
-    <ol type="I" start="5">
-      <li>
-        Item 5 of 239
-      </li>
-      <li>
-        Item 6 of 239
-      </li>
-      <li>
-        Item 7 of 239
-      </li>
-    </ol>
-    <!--Creating an unordered list with bulletpoints-->
-    <ul>
-      <li>
-        Item x of 239
-      </li>
-      <li>
-        Item y of 239
-      </li>
-      <li>
-        Item z of 239
-      </li>
-    </ul>
+        <li>
+          <a href="#table">Tables</a>
+        </li>
+      </ul>
+    <div id="writing">
+      <h2 id="write">
+        Writing
+      </h2>
+      <!--Paragraph notation <p></p> and line break notation <br>-->
+      <!-- Paragraph notation needs a closing notation but line break notation does not-->
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.<br> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p> 
+      <h3>
+        Sub-Heading
+      </h3>
+      <!-- <span> can be used to add attributes to individual words or phrases without creating a separate identity-->
+      <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.<br> Nulla consequat massa quis enim. Donec pede justo,<span>fringilla</span>  vel, aliquet nec, vulputate eget, <span>fringilla</span>arcu.<br> In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+      <p>Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.<br> Aenean vulputate eleifend tellus. Aenean leo ligula,<span>fringilla</span> porttitor eu, consequat vitae, eleifend ac, enim. <br>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.<span>fringilla</span> Phasellus viverra nulla ut metus varius laoreet.</p>
+    </div>
+    <div id="listing">
+      <h2 id="list">
+        Creating a List
+      </h2>
+      <!--Creating a normal ordered list indexed with numbers-->
+      <ol>
+        <!--<li></li>is used to indicate a list item-->
+        <li>
+          Item 1 of 239
+        </li>
+        <li>
+          Item 2 of 239
+        </li>
+        <li>
+          Item 3 of 239
+        </li>
+      </ol>
+      <!--type="a" for alphabet listing and type="i" for ronam numerals, i can be uppercase or lowercase for the respective roman numerals-->
+      <ol type="a">
+        <li>
+          Item 1 of 239
+        </li>
+        <li>
+          Item 2 of 239
+        </li>
+        <li>
+          Item 3 of 239
+        </li>
+      </ol>
+      <!--start="" can be used for the list index to start at a differnt position-->
+      <ol type="I" start="5">
+        <li>
+          Item 5 of 239
+        </li>
+        <li>
+          Item 6 of 239
+        </li>
+        <li>
+          Item 7 of 239
+        </li>
+      </ol>
+      <!--Creating an unordered list with bulletpoints-->
+      <ul>
+        <li>
+          Item x of 239
+        </li>
+        <li>
+          Item y of 239
+        </li>
+        <li>
+          Item z of 239
+        </li>
+      </ul>
+    </div>
+    <div id="linking">
+      <h2 id="link">
+        Cool Websites!
+      </h2>
+      <!--<a herf="|link goes here|"></a> is used for linking -->
+      <a herf="https://en.wikipedia.org/wiki/Red_panda">
+        Red Pandas going extinct!
+      </a>
+      <br>
+      <img src="redpanda.jpeg" alt="Image of a Red panda">
+      <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.<br> Nulla consequat massa quis enim. Donec pede justo, fringilla<span>fringilla</span> vel, aliquet nec, vulputate eget, arcu.<br> In enim justo, rhoncus ut, imperdiet a, <span>fringilla</span>venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
 
-    <h2 id="linking">
-      Cool Websites!
-    </h2>
-
-    <a herf="https://en.wikipedia.org/wiki/Red_panda">
-      Red Pandas going extinct!
-    </a>
-    <img src="redpanda.jpeg">
-    <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.<br> Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.<br> In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
-
-    <a herf="https://en.wikipedia.org/wiki/Blue_moon">
-      The mysterious moon
-    </a>
-    <img src="bluemoon.jpeg">
-    <p>Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.<br> Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. <br>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
+      <a herf="https://en.wikipedia.org/wiki/Blue_moon">
+        The mysterious moon
+      </a>
+      <br>
+      <img src="bluemoon.jpeg" alt="Image of a blue moon">
+      <p>Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.<br> Aenean vulputate eleifend tellus. Aenean leo ligula, <span>fringilla</span>porttitor eu, consequat vitae, eleifend ac, enim. <br>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
+    </div>
+    <div id="tables">
+      <h2 id="table">
+        Tables
+      </h2>
+      <!-- You can add style attributes to <table> with <table style=""> changing height and width-->
+      <table style="width: 100%; border: 5px solid black;">
+        <tr>
+          <th style="border: 1px solid blue;">
+            Heading 1
+          </th>
+          <th style="border: 1px solid blue;">
+            Heading 2
+          </th>
+          <th style="border: 1px solid blue;">
+            Heading 3
+          </th>
+        <tr>
+        </tr>
+          <td>
+            Colum 1, Row 1
+          </td>
+          <td>
+            Colum 2, Row 1
+          </td>
+          <td>
+            Colum 3, Row 1
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Colum 1, Row 2
+          </td>
+          <td>
+            Colum 2, Row 2
+          </td>
+          <td>
+            Colum 3, Row 2
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="form">
+      <h2 color: white>
+        Form
+      </h2>
+      <!--Forms used to send information to website from user-->
+      <!-- <form action=""> is used to send information to a website-->
+      <!--<form method="get"> is less secure than <form method="post">-->
+      <form method="get">
+        <!-- value used to input default value-->
+        <!--name is used to identify value placed in-->
+        First Name: <input type="text" name="First" value="First name"> <br>
+        Email: <input type="text" name="email" vaule="example@fake.com"> <br>
+        Number: <input type="number" name="number"> <br>
+        <!--Here you can keep the names the same for radio to make a togle function-->
+        Store Data: <input type="radio" name="radio"><input type="radio" name="radio"> <br>
+        Store Data: <input type="checkbox" name="checkbox"> <br>
+        <textarea name="feedback">
+          Please put your feedback here
+        </textarea>
+        <input type="button" value="Submit">
+       </form>
 
   </body>
-
 </html>
